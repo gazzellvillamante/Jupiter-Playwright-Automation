@@ -33,7 +33,7 @@ jobs:
         path: ~/.cache/ms-playwright
         key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       
-        - name: Install Playwright Browsers with OS Dependencies
+    - name: Install Playwright Browsers with OS Dependencies
       if: steps.playwright-cache.outputs.cache-hit != 'true'
       run: npx playwright install --with-deps
 
