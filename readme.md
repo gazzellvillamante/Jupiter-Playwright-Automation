@@ -1,3 +1,5 @@
+[![Playwright Tests](https://github.com/gazzellvillamante/Jupiter-Playwright-Automation/actions/workflows/playwright.yml/badge.svg)](https://github.com/gazzellvillamante/Jupiter-Playwright-Automation/actions/workflows/playwright.yml)
+
 ## Overview 
 An end to end automation framework for http://jupiter.cloud.planittesting.com that is built using Playwright + Javascript and follows the Page Object Model. By default, the automation suite executes test cases across 3 different browsers (Chrome, Firefox, Webkit). To execute a specific test file or on a specific browser, kindly refer to Test Execution instruction below.
 
