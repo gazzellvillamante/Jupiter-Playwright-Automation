@@ -28,7 +28,7 @@ jobs:
 
     - name: Cache Playwright browsers
       id: playwright-cache
-      uses: actions/cache@v4
+      uses: actions/cache@v5
       with:
         path: ~/.cache/ms-playwright
         key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
@@ -73,7 +73,7 @@ jobs:
     - run: npm ci
 
     - name: Download blob reports
-      uses: actions/download-artifact@v4
+      uses: actions/download-artifact@v7
       with:
         path: all-blob-reports
         pattern: blob-report-*
@@ -90,10 +90,10 @@ jobs:
         retention-days: 30
 
     - name: Upload report for Pages
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v5
       with:
         path: playwright-report/
 
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v4
+      uses: actions/deploy-pages@v5
